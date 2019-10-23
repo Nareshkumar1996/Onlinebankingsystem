@@ -1,0 +1,12 @@
+﻿@model Bankingsystem.ViewModels.AccountViewModel
+
+<div>
+    <h1>@Model.Heading</h1>
+    @foreach (var item in Model.AccountDetails)
+    {
+        <h1>@item.AccountId</h1>
+        <h1>@item.BalanceAmount</h1>
+        <h1>@item.Username</h1>
+    }
+</div>
+
