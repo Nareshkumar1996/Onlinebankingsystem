@@ -22,16 +22,7 @@ namespace Bankingsystem.Controllers
             return View();
         }
         
-        public ViewResult GetBalance()
-        {
-            AccountViewModel accountViewModel = new AccountViewModel();
-            accountViewModel.AccountDetails = _accountDetailRepository.AllDetails;
-            accountViewModel.Heading = "Bank";
-            return View(accountViewModel);
-            //var balan = _accountDetailRepository.ViewBalance(id);
-            //if (balan == null)
-            //    return NotFound();
-            //return View(balan);
-        }
+        
+        
     }
 }

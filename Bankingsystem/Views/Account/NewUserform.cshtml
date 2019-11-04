@@ -1,0 +1,19 @@
+﻿@model AccountViewModel
+<form asp-action="NewUser" method="post">
+
+    <div class="form-group">
+        <label asp-for="Username" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Username" class="form-control" />
+            <span asp-validation-for="Username" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="BalanceAmount" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="BalanceAmount" class="form-control" />
+            <span asp-validation-for="BalanceAmount" class="text-danger"></span>
+        </div>
+    </div>
+    <input type="submit" class="btn btn-primary" value="Create new user" />
+</form>

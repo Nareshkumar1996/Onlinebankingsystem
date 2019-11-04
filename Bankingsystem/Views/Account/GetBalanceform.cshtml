@@ -1,0 +1,16 @@
+﻿@model AccountViewModel
+
+
+<form asp-action="GetBalance" method="post">
+
+    <div class="form-group">
+        <label asp-for="AccountId" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="AccountId" class="form-control" />
+            <span asp-validation-for="AccountId" class="text-danger"></span>
+        </div>
+    </div>
+    
+
+    <input type="submit" class="btn btn-primary" value="Submit" />
+</form>

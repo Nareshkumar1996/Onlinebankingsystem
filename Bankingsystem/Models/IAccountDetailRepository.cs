@@ -8,8 +8,8 @@ namespace Bankingsystem.Models
     public interface IAccountDetailRepository
     {
         IEnumerable<AccountDetail> AllDetails { get;}
-        void AddAccountDetail(AccountDetail account);
-        int ViewBalance( int accountId);
-        int WithdrawAmount(int amt);
+        AccountDetail ViewBalance(int Id);
+        void CreateNewUser(AccountDetail accountDetail);
+      
     }
 }

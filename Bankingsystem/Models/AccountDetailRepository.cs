@@ -19,25 +19,18 @@ namespace Bankingsystem.Models
                 return _appDbContext.AccountDetails;
             }
         }
-
-        public void AddAccountDetail(AccountDetail account)
+        
+        public void CreateNewUser(AccountDetail accountDetail)
         {
-            throw new NotImplementedException();
+            _appDbContext.AccountDetails.Add(accountDetail);
+            _appDbContext.SaveChanges();
         }
 
-        public int ViewBalance(AccountDetail AccountId)
+        public AccountDetail ViewBalance(int Id)
         {
-            throw new NotImplementedException();
+            return _appDbContext.AccountDetails.FirstOrDefault(p => p.AccountId == Id);
         }
 
-        public int ViewBalance(int accountId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public int WithdrawAmount(int amt)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

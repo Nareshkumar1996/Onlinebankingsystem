@@ -1,0 +1,37 @@
+﻿@model AccountViewModel
+
+    <div>
+        <h1>@Model.Heading</h1>
+        <table border="1px">
+            <tr>
+            <th>AccountId</th>
+            <th>Username</th>
+            <th>BalanceAmount</th>
+            </tr>
+
+            <tr>
+                <td>
+                    @foreach (var item in Model.AccountDetails)
+                    {
+                        <h1>@item.AccountId</h1>
+                     
+                    }
+                </td>
+                <td>
+                    @foreach (var item in Model.AccountDetails)
+                    {
+                      
+                        <h1>@item.Username</h1>
+                      
+                    }
+                </td>
+                <td>
+                    @foreach (var item in Model.AccountDetails)
+                    {
+                       
+                        <h1>@item.BalanceAmount</h1>
+                    }
+                </td>
+            </tr>
+        </table>
+    </div>
